@@ -1,0 +1,76 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Jane Doe",
+      "isPresent": true
+    },
+    {
+      "id": "2",
+      "name": "John Smith",
+      "isPresent": false
+    },
+    {
+      "id": "3",
+      "name": "Ada Lovelace",
+      "isPresent": true
+    }
+  ],
+  "fees": [
+    {
+      "id": "1",
+      "studentName": "Jane Doe",
+      "amount": 500,
+      "isPaid": true
+    },
+    {
+      "id": "2",
+      "studentName": "John Smith",
+      "amount": 350,
+      "isPaid": true
+    },
+    {
+      "id": "3",
+      "studentName": "Ada Lovelace",
+      "amount": 200,
+      "isPaid": false
+    },
+    {
+      "studentName": "Jane Doe",
+      "amount": 20,
+      "isPaid": false,
+      "id": "RxZW-7M0d8k"
+    },
+    {
+      "studentName": "reniways",
+      "amount": 50000,
+      "isPaid": false,
+      "id": "k0oPTf-xtgQ"
+    },
+    {
+      "studentName": "",
+      "amount": 0,
+      "isPaid": false,
+      "id": "ZoUHjdQ0gdM"
+    },
+    {
+      "studentName": "",
+      "amount": 0,
+      "isPaid": false,
+      "id": "CAarp96d3sI"
+    },
+    {
+      "studentName": "Olabanji Emmanuel",
+      "amount": 12000,
+      "isPaid": true,
+      "id": "ayZpyRQqacg"
+    },
+    {
+      "studentName": "renu",
+      "amount": 200,
+      "isPaid": false,
+      "id": "qwBuJpGjV1E"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
