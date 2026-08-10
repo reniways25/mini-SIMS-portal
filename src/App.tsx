@@ -14,45 +14,45 @@ function App() {
   const [newFeeAmount, setNewFeeAmount] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:3001/students')
-      .then((res) => res.json())
-      .then((data) => setStudents(data))
-  }, [])
+  fetch('https://6a78d2f2f0f1cdf392249419.mockapi.io/students')
+    .then((res) => res.json())
+    .then((data) => setStudents(data))
+}, [])
 
-  useEffect(() => {
-    fetch('http://localhost:3001/fees')
-      .then((res) => res.json())
-      .then((data) => setFees(data))
-  }, [])
+useEffect(() => {
+  fetch('https://6a78d2f2f0f1cdf392249419.mockapi.io/fees')
+    .then((res) => res.json())
+    .then((data) => setFees(data))
+}, [])
 
-  function toggleStudent(id: number) {
-    const student = students.find((s) => s.id === id)
-    if (!student) return
-    const updatedIsPresent = !student.isPresent
-    fetch(`http://localhost:3001/students/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ isPresent: updatedIsPresent }),
-    }).then(() => {
-      setStudents(students.map((s) => (s.id === id ? { ...s, isPresent: updatedIsPresent } : s)))
-    })
-  }
+ function toggleStudent(id: number) {
+  const student = students.find((s) => s.id === id)
+  if (!student) return
+  const updatedIsPresent = !student.isPresent
+  fetch(`https://6a78d2f2f0f1cdf392249419.mockapi.io/students/${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ isPresent: updatedIsPresent }),
+  }).then(() => {
+    setStudents(students.map((s) => (s.id === id ? { ...s, isPresent: updatedIsPresent } : s)))
+  })
+}
 
   function toggleFee(id: number) {
-    const fee = fees.find((f) => f.id === id)
-    if (!fee) return
-    const updatedIsPaid = !fee.isPaid
-    fetch(`http://localhost:3001/fees/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ isPaid: updatedIsPaid }),
-    }).then(() => {
-      setFees(fees.map((f) => (f.id === id ? { ...f, isPaid: updatedIsPaid } : f)))
-    })
-  }
+  const fee = fees.find((f) => f.id === id)
+  if (!fee) return
+  const updatedIsPaid = !fee.isPaid
+  fetch(`https://6a78d2f2f0f1cdf392249419.mockapi.io/fees/${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ isPaid: updatedIsPaid }),
+  }).then(() => {
+    setFees(fees.map((f) => (f.id === id ? { ...f, isPaid: updatedIsPaid } : f)))
+  })
+}
 
   function addFee() {
-    fetch('http://localhost:3001/fees', {
+    fetch('https://6a78d2f2f0f1cdf392249419.mockapi.io/fees', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ studentName: newFeeName, amount: Number(newFeeAmount), isPaid: false }),
@@ -66,7 +66,7 @@ function App() {
   }
 
   function deleteFee(id: number) {
-  fetch(`http://localhost:3001/fees/${id}`, {
+  fetch(`https://6a78d2f2f0f1cdf392249419.mockapi.io/fees/${id}`, {
     method: 'DELETE',
   }).then(() => {
     setFees(fees.filter((f) => f.id !== id))
