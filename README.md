@@ -50,9 +50,7 @@ src/
 db.json             mock database used by json-server
 ```
 
-## Known Issues
 
-- Occasionally, toggling a Present/Absent or Paid/Unpaid status triggers a full page reload instead of a smooth in-app update. The underlying data still saves correctly to the mock API — this is a cosmetic issue traced to a stray browser service worker registration, not a data integrity problem.
 
 ## Scope Notes
 
