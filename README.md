@@ -63,3 +63,11 @@ This project intentionally simplifies a few areas from the original brief for th
 ## Author's Note
 
 This project was built with an emphasis on understanding — every core React concept (state, props, lifting state, lists, effects, CRUD operations) was learned and applied deliberately rather than copied, in contrast to earlier curriculum projects.
+
+## Submission
+
+- **Live Project:** [https://mini-sims-portal-53vp.vercel.app/](https://mini-sims-portal-53vp.vercel.app/)
+- **GitHub Repository:** [https://github.com/reniways25/mini-sims-portal](https://github.com/reniways25/mini-sims-portal)
+- **Presentation Slides (PDF):** [View Slides](https://mini-sims-portal-53vp.vercel.app/presentation-slides.pdf)
+- **Screenshots:** `./Screenshots`
+- **Color Palette:** [Coolors Scheme](https://coolors.co/08090c-d6dad9-0c0b0e-09090b-595d60)
