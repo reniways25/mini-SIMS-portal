@@ -14,13 +14,13 @@ function App() {
   const [newFeeAmount, setNewFeeAmount] = useState('')
 
   useEffect(() => {
-  fetch('https://6a78d2f2f0f1cdf392249419.mockapi.io/students')
+  fetch('https://my-json-server.typicode.com/reniways25/mini-SIMS-portal/students')
     .then((res) => res.json())
     .then((data) => setStudents(data))
 }, [])
 
 useEffect(() => {
-  fetch('https://6a78d2f2f0f1cdf392249419.mockapi.io/fees')
+  fetch('https://my-json-server.typicode.com/reniways25/mini-SIMS-portal/fees')
     .then((res) => res.json())
     .then((data) => setFees(data))
 }, [])
@@ -29,7 +29,7 @@ useEffect(() => {
   const student = students.find((s) => s.id === id)
   if (!student) return
   const updatedIsPresent = !student.isPresent
-  fetch(`https://6a78d2f2f0f1cdf392249419.mockapi.io/students/${id}`, {
+  fetch(`https://my-json-server.typicode.com/reniways25/mini-SIMS-portal/students/${id}`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ isPresent: updatedIsPresent }),
@@ -42,7 +42,7 @@ useEffect(() => {
   const fee = fees.find((f) => f.id === id)
   if (!fee) return
   const updatedIsPaid = !fee.isPaid
-  fetch(`https://6a78d2f2f0f1cdf392249419.mockapi.io/fees/${id}`, {
+  fetch(`https://my-json-server.typicode.com/reniways25/mini-SIMS-portal/fees/${id}`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ isPaid: updatedIsPaid }),
@@ -52,7 +52,7 @@ useEffect(() => {
 }
 
   function addFee() {
-    fetch('https://6a78d2f2f0f1cdf392249419.mockapi.io/fees', {
+    fetch('https://my-json-server.typicode.com/reniways25/mini-SIMS-portal/fees', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ studentName: newFeeName, amount: Number(newFeeAmount), isPaid: false }),
@@ -66,7 +66,7 @@ useEffect(() => {
   }
 
   function deleteFee(id: string) {
-  fetch(`https://6a78d2f2f0f1cdf392249419.mockapi.io/fees/${id}`, {
+  fetch(`https://my-json-server.typicode.com/reniways25/mini-SIMS-portal/fees/${id}`, {
     method: 'DELETE',
   }).then(() => {
     setFees(fees.filter((f) => f.id !== id))
