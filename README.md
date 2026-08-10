@@ -68,6 +68,6 @@ This project was built with an emphasis on understanding — every core React co
 
 - **Live Project:** [https://mini-sims-portal-53vp.vercel.app/](https://mini-sims-portal-53vp.vercel.app/)
 - **GitHub Repository:** [https://github.com/reniways25/mini-sims-portal](https://github.com/reniways25/mini-sims-portal)
-- **Presentation Slides (PDF):** [View Presentation Slides (PDF)](https://raw.githubusercontent.com/reniways25/mini-sims-portal/main/Mini-SIMS%20Portal%20Presentation.pdf)
+- **Presentation Slides (PDF):** [View Presentation Slides (PDF)](https://github.com/reniways25/mini-SIMS-portal/blob/main/public/presentation-slides.pdf.pdf)
 - **Screenshots:** `./Screenshots`
 - **Color Palette:** [Coolors Scheme](https://coolors.co/08090c-d6dad9-0c0b0e-09090b-595d60)
