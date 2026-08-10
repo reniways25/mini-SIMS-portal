@@ -3,12 +3,12 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import FeeItem from "../components/FeeItem"
 
-type Fee = { id: number; studentName: string; amount: number; isPaid: boolean }
+type Fee = { id: string; studentName: string; amount: number; isPaid: boolean }
 
 type Props = {
   fees: Fee[]
-  onToggle: (id: number) => void
-  onDeleteFee: (id: number) => void
+  onToggle: (id: string) => void
+  onDeleteFee: (id: string) => void
   newFeeName: string
   setNewFeeName: (v: string) => void
   newFeeAmount: string

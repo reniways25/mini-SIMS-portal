@@ -4,8 +4,8 @@ import Dashboard from "./pages/Dashboard"
 import Attendance from "./pages/Attendance"
 import Fees from "./pages/Fees"
 
-type Student = { id: number; name: string; isPresent: boolean }
-type Fee = { id: number; studentName: string; amount: number; isPaid: boolean }
+type Student = { id: string; name: string; isPresent: boolean }
+type Fee = { id: string; studentName: string; amount: number; isPaid: boolean }
 
 function App() {
   const [students, setStudents] = useState<Student[]>([])
@@ -25,7 +25,7 @@ useEffect(() => {
     .then((data) => setFees(data))
 }, [])
 
- function toggleStudent(id: number) {
+ function toggleStudent(id: string) {
   const student = students.find((s) => s.id === id)
   if (!student) return
   const updatedIsPresent = !student.isPresent
@@ -38,7 +38,7 @@ useEffect(() => {
   })
 }
 
-  function toggleFee(id: number) {
+  function toggleFee(id: string) {
   const fee = fees.find((f) => f.id === id)
   if (!fee) return
   const updatedIsPaid = !fee.isPaid
@@ -65,7 +65,7 @@ useEffect(() => {
       })
   }
 
-  function deleteFee(id: number) {
+  function deleteFee(id: string) {
   fetch(`https://6a78d2f2f0f1cdf392249419.mockapi.io/fees/${id}`, {
     method: 'DELETE',
   }).then(() => {

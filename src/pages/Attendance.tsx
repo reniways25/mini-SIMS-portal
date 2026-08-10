@@ -1,10 +1,10 @@
 import AttendanceItem from "../components/AttendanceItem"
 
-type Student = { id: number; name: string; isPresent: boolean }
+type Student = { id: string; name: string; isPresent: boolean }
 
 type Props = {
   students: Student[]
-  onToggle: (id: number) => void
+  onToggle: (id: string) => void
 }
 
 function Attendance({ students, onToggle }: Props) {
